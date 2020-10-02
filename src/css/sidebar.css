@@ -63,6 +63,7 @@
    text-align: left;
    border:none !important;
 }
+
 .logo__color
 {
     color:#BC6777;
@@ -183,7 +184,7 @@ nav .fa
 }
 .dashboard
 {
-  color:#ffffff;
+  color:#88898E;
   background-color: #2D3134 !important;
   height: 50px;
   padding:10px;
@@ -201,6 +202,31 @@ nav .fa
   padding-left:35px;
   padding-right:20px;
 }
+.list-group a:hover
+{
+  background-color: #34383B !important;
+ 
+}
+
+@media(max-width:768px)
+{
+  #sidebar-wrapper
+  {
+  min-width:0px;
+  }
+  .list-group a
+  {
+       font-size: 14px;
+       width: 180px;
+  }
+  .list-group .fa
+  {
+         font-size: 14px;
+  }
+ 
+}
+
+
 
 @media(max-width:540px)
 {
@@ -209,6 +235,16 @@ nav .fa
     padding-left:25px;
     padding-right:25px;
   } 
+  .list-group a
+  {
+       font-size: 14px;
+       width: 130px;
+
+   }
+   .list-group .fa
+  {
+         font-size: 14px;
+  }
 }
 
 @media(max-width:500px)
@@ -217,6 +253,19 @@ nav .fa
   {
     padding-left:25px;
     padding-right:25px;
+  }
+  .list-group
+  {
+ position: relative;
   } 
+  .list-group a
+  {
+       font-size: 14px;
+       width: 130px;
+  }
+  .list-group .fa
+  {
+         font-size: 14px;
+  }
 }
 

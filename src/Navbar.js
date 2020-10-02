@@ -23,13 +23,16 @@ function callCards(object)
 }
 
 
+
 function Navbar() {
   let [toggleEvent, update] = useState(true);
 
   const toggleStatus = () => {
-    // let stateHandle = useState();
+    
     update(toggleEvent==false);
 }
+
+
 
     return (
 
@@ -38,7 +41,7 @@ function Navbar() {
 {
             toggleEvent?
         <div className="bg-dark border-right" id="sidebar-wrapper">
-          <div className="sidebar-heading"> <span className="logo__color">Dark</span>Admin <i   className="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
+          <div className="sidebar-heading"> <span className="logo__color">Dark</span>Admin </div>
           
           <div>
             
@@ -54,7 +57,7 @@ function Navbar() {
             <a href="#" className="list-group-item list-group-item-action bg-dark"><i className="fa fa-table" aria-hidden="true"></i>Table</a>
             <a href="#" className="list-group-item list-group-item-action bg-dark"><i className="fa fa-area-chart" aria-hidden="true"></i>Charts</a>
             <a href="#" className="list-group-item list-group-item-action bg-dark"><i className="fa fa-address-book-o" aria-hidden="true"></i>Forms</a>
-            <a href="#" className="list-group-item list-group-item-action bg-dark"><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Logout Page</a>
+            <a href="#" className="list-group-item list-group-item-action bg-dark"><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Logout</a>
           <label>Extras</label>
           <a href="#" className="list-group-item list-group-item-action bg-dark"><i className="fa fa-desktop" aria-hidden="true"></i>Demo</a>
             <a href="#" className="list-group-item list-group-item-action bg-dark"><i className="fa fa-desktop" aria-hidden="true"></i>Demo</a>
@@ -70,10 +73,10 @@ function Navbar() {
     
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
             {/* <button className="btn btn-primary" id="menu-toggle" onClick="toggle()">Toggle Menu</button> */}
-    
-            <button className="navbar-toggler" type="button" data-toggle="collapse"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span onClick={toggleStatus}  className="navbar-toggler-icon"></span>
-            </button>
+            {toggleEvent?<i className="fa fa-arrow-circle-o-left" onClick={toggleStatus} aria-hidden="true"></i>
+            :<i className="fa fa-arrow-circle-o-right" onClick={toggleStatus} aria-hidden="true"></i>
+          }
+            
     
             <div className="collapse navbar-collapse" >
          
@@ -86,7 +89,7 @@ function Navbar() {
    </div>
               </li> */}
               
-              <li className="nav-item ">
+              <li className="nav-item">
                   <a className="nav-link" href="#"><i className="fa fa-search" aria-hidden="true"></i> </a>
                 </li>
                 <li className="nav-item ">
